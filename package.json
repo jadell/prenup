@@ -1,0 +1,14 @@
+{
+  "name": "prenup",
+  "description": "Syntactic sugar for Vows",
+  "version": "0.0.0",
+  "repository": "/media/sf_joshhome/Dropbox/prenup",
+  "author": "Josh Adell <josh.adell@gmail.com> (http://joshadell.com)",
+  "main": "lib/index",
+  "directories": {
+    "lib": "lib"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
