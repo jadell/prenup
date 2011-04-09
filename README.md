@@ -5,6 +5,29 @@ Copyright (c) 2011
 
 Syntactic sugar for Vows
 
+API
+---
+
+    createContext(topic) : Context
+Create a new Context object.  `topic` is a valid Vows topic.
+
+    Context::vow(title, vow) : Context
+Add a vow assertion to the context.  Returns the Context object. `title` is the string Vows will display in --spec output.  `vow` is a valid Vows assertion function.
+
+    Context::sub(title, topic) : Context
+Create a subcontext.  Returns the subcontext as a Context object. `title` is the string Vows will display in --spec output.  `topic` is a valid Vows topic.
+
+    Context::parent() : Context
+    Context::parent(parent) : Context
+Return the Context object's parent context or `null` if the Context has no parent.  If `parent` is provided, set it as the parent context and return it.
+
+    Context::root() : Context
+Return most distant ancestor of the Context object, the root of the context tree.
+
+    Context::seal() : object
+Return a context tree in the proper form to be used as a Vows test.
+
+
 Example
 -------
 

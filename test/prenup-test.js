@@ -1,6 +1,7 @@
 var vows = require('vows'),
 	assert = require('assert'),
-	Context = require('../lib/index').Context;
+	prenup = require('../lib/index'),
+	Context = prenup.Context;
 
 // Simple math example
 var addition = new Context(function () { return 1+3; })
@@ -18,7 +19,7 @@ var addition = new Context(function () { return 1+3; })
 			.root();
 
 // A new chain next to the "addition" chain
-var division = new Context(function () {
+var division = prenup.createContext(function () {
 	return 6/2;
 })
 	.vow("is a number", function (topic) { assert.isNumber(topic); })
