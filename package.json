@@ -10,5 +10,9 @@
   },
   "engines": {
     "node": "*"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/jadell/prenup.git"
   }
 }
